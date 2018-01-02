@@ -3,7 +3,12 @@
         category: 'function',
         color: '#a6bbcf',
         defaults: {
-            name: {value:""}
+            name: {value:""},
+            port: {value:"22"}
+        },
+        credentials: {
+            user: {type:"text"},
+            password: {type: "password"}
         },
         inputs:1,
         outputs:1,
@@ -15,6 +20,22 @@
 </script>
 
 <script type="text/x-red" data-template-name="simple-SSH">
+    <div class="form-row">
+        <label for="node-input-ip"><i class="fa fa-globe"></i> </label>
+        <input id="node-input-ip" type="text" placeholder="1.2.3.4">
+    </div>
+
+    
+    <div class="form-row">
+        <label for="node-input-user"><i class="fa fa-user"></i></label>
+        <input type="text" id="node-input-user">
+    </div>
+    <div class="form-row">
+        <label for="node-input-password"><i class="fa fa-lock"></i></label>
+        <input type="password" id="node-input-password">
+    </div>
+    
+
     <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
